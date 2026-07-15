@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vishal Tomar — Backend Engineer</title>
+<meta name="description" content="Vishal Tomar — Backend / IT Application Engineer. Java, Spring Boot, NetSuite SuiteScript automation.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="nav" id="top">
+  <div class="nav__profile">
+    <button class="nav__avatar-btn" id="avatarBtn" aria-haspopup="true" aria-expanded="false" aria-label="Profile options">
+      <img id="navAvatar" class="nav__avatar" src="profile.jpg" alt="Vishal Tomar">
+    </button>
+    <a class="nav__logo" href="#top">VT<span class="dot">.</span></a>
+
+    <div class="profile-menu" id="profileMenu" role="menu">
+      <button type="button" id="changePhotoBtn" role="menuitem"></button>
+      <button type="button" id="removePhotoBtn" role="menuitem"></button>
+    </div>
+  </div>
+
+  <nav class="nav__links">
+    <a href="#about"><span class="path">About</span></a>
+    <a href="#experience"><span class="path">Experience</span></a>
+    <a href="#projects"><span class="path">Projects</span></a>
+    <a href="#skills"><span class="path">Skills</span></a>
+    <a href="#achievements"><span class="path">Achievements</span></a>
+    <a href="#contact"><span class="path">Contact</span></a>
+  </nav>
+  <a class="nav__cta" href="mailto:vishaltomar004@gmail.com">Get in touch</a>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<input type="file" id="photoInput" accept="image/*" hidden>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="about">
+    <div class="hero__text">
+      <div class="hero__avatar-wrap">
+        <button class="hero__avatar-btn" id="heroAvatarBtn" aria-label="Change profile photo">
+          <img id="heroAvatar" class="hero__avatar" src="profile.jpg" alt="Vishal Tomar">
+          
+        </button>
+      </div>
+      <p class="eyebrow">// vishal-tomar · it application engineer</p>
+      <h1>I build the automation<br>behind business systems.</h1>
+      <p class="hero__sub">
+        I work on SuiteScripts and backend services that quietly keep operations running —
+        approval flows, purchase order checks, and the APIs that connect them. Off the clock,
+        I've worked through 600+ data structure &amp; algorithm problems, one commit at a time.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View projects</a>
+        <a href="mailto:vishaltomar004@gmail.com" class="btn btn--ghost">Say hello</a>
+        <a href="Vishal_Tomar_Resume.pdf" class="btn btn--ghost" download>Download resume</a>
+      </div>
+      <div class="hero__location">
+        <span class="status-dot"></span> Bangalore, Karnataka — open to work
+      </div>
+    </div>
+
+    <div class="terminal" role="img" aria-label="Terminal window showing a mock API request returning Vishal's profile as JSON">
+      <div class="terminal__bar">
+        <span class="terminal__dot terminal__dot--r"></span>
+        <span class="terminal__dot terminal__dot--y"></span>
+        <span class="terminal__dot terminal__dot--g"></span>
+        <span class="terminal__title">profile.sh</span>
+      </div>
+      <pre class="terminal__body" id="terminalBody"></pre>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <p class="section__eyebrow">01 — log</p>
+    <h2 class="section__title">Experience</h2>
+
+    <div class="log-entry reveal">
+      <div class="log-entry__meta">
+        <span class="log-entry__time">Aug 2025 → present</span>
+        <span class="tag tag--live">active</span>
+      </div>
+      <h3 class="log-entry__role">Jr. IT Application Intern</h3>
+      <p class="log-entry__org">Arista Networks</p>
+      <ul class="log-entry__points">
+        <li>Built and customized SuiteScripts — User Event, Scheduled, Client, and RESTlet — to automate purchase order validation, customer record updates, and approval flows in NetSuite.</li>
+        <li>Created custom records, automated workflows, and tuned saved searches to speed up day-to-day ERP work.</li>
+        <li>Worked with cross-functional teams to turn business requirements into working technical solutions inside NetSuite.</li>
+        <li>Tracked down and fixed script and deployment errors, making automations more stable and faster to run.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <p class="section__eyebrow">02 — endpoints</p>
+    <h2 class="section__title">Projects</h2>
+
+    <div class="endpoints">
+
+      <article class="endpoint reveal">
+        <div class="endpoint__head">
+          <span class="method method--post">POST</span>
+          <span class="endpoint__path">/rapidgrow</span>
+        </div>
+        <h3 class="endpoint__title">RapidGrow — Java Backend Platform</h3>
+        <p class="endpoint__desc">
+          A backend that connects blue-collar workers — electricians, plumbers, drivers, carpenters —
+          with customers who need them. Customers post a job, workers bid on it, and the customer
+          picks who gets hired.
+        </p>
+        <ul class="endpoint__points">
+          <li>REST APIs built with Spring Boot and MySQL powering job posting, bidding, and selection.</li>
+          <li>Data modelled around real hiring flow: post → bid → select.</li>
+        </ul>
+        <div class="endpoint__tags">
+          <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">MySQL</span><span class="chip">REST API</span>
+        </div>
+        <a class="endpoint__link" href="https://github.com/vishaltomar004/RapidGrow" target="_blank" rel="noopener">View repository →</a>
+      </article>
+
+      <article class="endpoint reveal">
+        <div class="endpoint__head">
+          <span class="method method--get">GET</span>
+          <span class="endpoint__path">/password-generator</span>
+        </div>
+        <h3 class="endpoint__title">Password Generator</h3>
+        <p class="endpoint__desc">
+          A small, focused web tool for generating strong passwords on the spot — built to be fast
+          and simple rather than feature-heavy.
+        </p>
+        <ul class="endpoint__points">
+          <li>Toggle uppercase, lowercase, numbers, and symbols independently.</li>
+          <li>Adjustable password length with instant results.</li>
+        </ul>
+        <div class="endpoint__tags">
+          <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+        </div>
+        <a class="endpoint__link" href="https://vishaltomar004.github.io/Password-Generator/" target="_blank" rel="noopener">Try it live →</a>
+      </article>
+
+      <article class="endpoint reveal">
+        <div class="endpoint__head">
+          <span class="method method--get">GET</span>
+          <span class="endpoint__path">/monosters-rolodex</span>
+        </div>
+        <h3 class="endpoint__title">Monosters Rolodex</h3>
+        <p class="endpoint__desc">
+          A React practice project — a searchable rolodex of monster characters, built to get
+          hands-on with component architecture and state management in React.
+        </p>
+        <ul class="endpoint__points">
+          <li>Live search box filters the monster list as you type.</li>
+          <li>Built with reusable React components for cards, search, and layout.</li>
+        </ul>
+        <div class="endpoint__tags">
+          <span class="chip">React</span><span class="chip">JavaScript</span><span class="chip">CSS</span>
+        </div>
+        <div class="endpoint__linkrow">
+          <a class="endpoint__link" href="https://github.com/vishaltomar004/monosters-rolodex" target="_blank" rel="noopener">View repository →</a>
+          <a class="endpoint__link" href="https://vishaltomar004.github.io/monosters-rolodex/" target="_blank" rel="noopener">Try it live →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <p class="section__eyebrow">03 — dependencies</p>
+    <h2 class="section__title">Skills</h2>
+
+    <div class="deps reveal">
+      <div class="deps__group">
+        <p class="deps__label">languages</p>
+        <div class="deps__chips">
+          <span class="chip chip--dep">Java</span>
+          <span class="chip chip--dep">MySQL</span>
+        </div>
+      </div>
+      <div class="deps__group">
+        <p class="deps__label">core concepts</p>
+        <div class="deps__chips">
+          <span class="chip chip--dep">Data Structures &amp; Algorithms</span>
+          <span class="chip chip--dep">API Design</span>
+          <span class="chip chip--dep">JPA</span>
+          <span class="chip chip--dep">Hibernate</span>
+        </div>
+      </div>
+      <div class="deps__group">
+        <p class="deps__label">frameworks</p>
+        <div class="deps__chips">
+          <span class="chip chip--dep">Spring Boot</span>
+          <span class="chip chip--dep">Spring Security</span>
+        </div>
+      </div>
+      <div class="deps__group">
+        <p class="deps__label">developer tools</p>
+        <div class="deps__chips">
+          <span class="chip chip--dep">VS Code</span>
+          <span class="chip chip--dep">IntelliJ IDEA</span>
+          <span class="chip chip--dep">Postman</span>
+          <span class="chip chip--dep">Git / GitHub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section" id="achievements">
+    <p class="section__eyebrow">04 — stats</p>
+    <h2 class="section__title">Achievements</h2>
+
+    <div class="stats reveal">
+      <a class="stat" href="https://leetcode.com/u/vishaltomar004/" target="_blank" rel="noopener">
+        <span class="stat__num">370+</span>
+        <span class="stat__label">DSA problems on LeetCode</span>
+      </a>
+      <a class="stat" href="https://www.geeksforgeeks.org/profile/vishaltomar004" target="_blank" rel="noopener">
+        <span class="stat__num">270+</span>
+        <span class="stat__label">DSA problems on GeeksforGeeks</span>
+      </a>
+      <a class="stat" href="https://www.hackerrank.com/profile/vishaltomar004" target="_blank" rel="noopener">
+        <span class="stat__num">5★</span>
+        <span class="stat__label">HackerRank — Java</span>
+      </a>
+      <a class="stat" href="https://www.hackerrank.com/profile/vishaltomar004" target="_blank" rel="noopener">
+        <span class="stat__num">3★</span>
+        <span class="stat__label">HackerRank — Problem Solving</span>
+      </a>
+      <a class="stat" href="https://www.codechef.com/users/vishaltomar004" target="_blank" rel="noopener">
+        <span class="stat__num">1139</span>
+        <span class="stat__label">Max rating on CodeChef</span>
+      </a>
+    </div>
+
+    <div class="split reveal">
+      <div class="split__col">
+        <p class="section__eyebrow">education</p>
+        <div class="edu">
+          <div class="edu__item">
+            <p class="edu__degree">B.Tech, Information Technology</p>
+            <p class="edu__school">G.L. Bajaj Institute of Technology and Management, Greater Noida</p>
+            <p class="edu__meta">2021 – 2025 · 8.5 GPA</p>
+          </div>
+          <div class="edu__item">
+            <p class="edu__degree">Intermediate (Class XII)</p>
+            <p class="edu__school">Ingraham Institute, Aligarh</p>
+            <p class="edu__meta">2019 – 2020 · 91.0%</p>
+          </div>
+          <div class="edu__item">
+            <p class="edu__degree">High School (Class X)</p>
+            <p class="edu__school">Ingraham Institute, Aligarh</p>
+            <p class="edu__meta">2017 – 2018 · 93.0%</p>
+          </div>
+        </div>
+      </div>
+      <div class="split__col">
+        <p class="section__eyebrow">certifications</p>
+        <div class="certs">
+          <a class="cert" href="https://www.hackerrank.com/certificates/586f58b40e61" target="_blank" rel="noopener">
+            <span class="cert__name">Java Certification</span>
+            <span class="cert__org">HackerRank — Java basics test</span>
+          </a>
+          <a class="cert" href="https://drive.google.com/file/d/1GpMRI-9nGUx9WmRqogfUg39cBHp2cbqs/view" target="_blank" rel="noopener">
+            <span class="cert__name">Neuro Nest Hackathon</span>
+            <span class="cert__org">Participation — G.L. Bajaj Institute of Technology and Management</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <p class="section__eyebrow">05 — contact</p>
+    <h2 class="section__title">Let's talk</h2>
+    <p class="contact__sub">Have a role, a project, or just want to swap notes on NetSuite automation? My inbox is open.</p>
+
+    <div class="contact__grid reveal">
+      <a class="contact__card" href="mailto:vishaltomar004@gmail.com">
+        <span class="contact__k">email</span>
+        <span class="contact__v">vishaltomar004@gmail.com</span>
+      </a>
+      <a class="contact__card" href="tel:+918445179147">
+        <span class="contact__k">phone</span>
+        <span class="contact__v">+91 84451 79147</span>
+      </a>
+      <a class="contact__card" href="https://www.linkedin.com/in/vishal-tomar004/" target="_blank" rel="noopener">
+        <span class="contact__k">linkedin</span>
+        <span class="contact__v">/in/vishal-tomar004</span>
+      </a>
+      <a class="contact__card" href="https://github.com/vishaltomar004" target="_blank" rel="noopener">
+        <span class="contact__k">github</span>
+        <span class="contact__v">/vishaltomar004</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Built by Vishal Tomar · <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
